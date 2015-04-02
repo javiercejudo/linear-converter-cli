@@ -8,4 +8,4 @@ CLI for [linear-converter](https://github.com/javiercejudo/linear-converter)
 
 ## Basic usage
 
-    linear-converter-cli 25 -u temperature -p celsiusToFahrenheit
+    linear-converter 25 -u temperature -p celsiusToFahrenheit

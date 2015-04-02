@@ -1,8 +1,11 @@
 {
   "name": "linear-converter-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Flexible linear converter with built in conversions for common units",
   "main": "src/linear-converter-cli.js",
+  "bin": {
+    "linear-converter": "src/linear-converter-cli.js"
+  },
   "scripts": {
     "test": "gulp test"
   },
