@@ -24,11 +24,7 @@ if (program.precision) {
 
 const lc = lcFactory(Decimal);
 const anyToAny = anyToAnyFactory(Decimal);
-let property = program.property;
-
-if (isUndefined(property)) {
-  property = inferrer(program);
-}
+const property = inferrer(program);
 
 if (isUndefined(presets[property])) {
   console.error(`Unrecognised unit: ${program.from}`);
