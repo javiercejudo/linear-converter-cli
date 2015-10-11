@@ -8,25 +8,36 @@ CLI for [linear-converter](https://github.com/javiercejudo/linear-converter)
 
 ## Usage
 
-    linear-converter 25 --from celsius --to fahrenheit
+    $ linear-converter 25 --from metres --to yards
+    27.34033245844269466325
 
-    # short form
-    lco 25 -f °C -t °F
+    $ lco 25 -f m -t yd
+    27.34033245844269466325
 
 The program will try to infer the `--property` (`-p`) option if not present,
 but it must be declared in cases with ambiguity.
 
-    linear-converter 25 --property time --from s --to d
+    $ linear-converter 25 -f °C -t °F
+    Ambiguous units: temperature, temperatureDifference.
+
+    $ linear-converter 25 -p temperature -f °C -t °F
+    77
+
+    $ linear-converter 25 -p temperatureDifference -f °C -t °F
+    45
 
 Negative values can be declared using the `--negative` (`-n`) flag, or piped in.
 
-    linear-converter -n 100 --from fahrenheit --to celsius
+    $ linear-converter -n 76 -p temperature --from fahrenheit --to celsius
+    -60
 
-    echo -40 | linear-converter --from °C --to °F
+    $ echo -76 | linear-converter -p temperature --from fahrenheit --to celsius
+    -60
 
 A final example to overcome the lack of some units (yards to hectometres):
 
-    lco 34500 -f yards -t metres | lco -f none -t hecto
+    $ lco 34500 -f yards -t metres | lco -f none -t hecto
+    315.468
 
 ## Help
 
@@ -44,9 +55,9 @@ A final example to overcome the lack of some units (yards to hectometres):
 
     Examples
 
-      $ linear-converter 25 --property length --from metres --to yards
+      $ linear-converter 25 --from metres --to yards
       $ lco -n 100 -f fahrenheit -t celsius
-      $ echo -40 | lco --from °C --to °F
+      $ lco 34500 -f yards -t metres | lco -f none -t hecto
 
     Properties and units
 

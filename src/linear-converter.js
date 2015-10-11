@@ -24,7 +24,20 @@ if (program.precision) {
 
 const lc = lcFactory(Decimal);
 const anyToAny = anyToAnyFactory(Decimal);
-const property = inferrer(program);
+const properties = inferrer(program);
+
+if (properties.size === 0) {
+  console.error('Unable to infer property.');
+  process.exit(1);
+}
+
+if (properties.size > 1) {
+  console.error(`Ambiguous units: ${Array.from(properties).join(', ')}.`);
+  console.error(`Please specify a property using the --property (-p) option.`);
+  process.exit(1);
+}
+
+const property = properties.values().next().value;
 
 if (isUndefined(presets[property])) {
   console.error(`Unrecognised unit: ${program.from}`);
@@ -36,7 +49,7 @@ const to = synonyms[property][program.to];
 
 if (isUndefined(to)) {
   console.error(`Unrecognised ${property} unit: ${program.to}`);
-  process.exit(2);
+  process.exit(1);
 }
 
 const conversion = anyToAny(
@@ -54,5 +67,5 @@ stdin().then((input) => {
   process.exit(0);
 }).catch((reason) => {
   console.error(reason);
-  process.exit(3);
+  process.exit(1);
 });

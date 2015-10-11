@@ -2,12 +2,8 @@
 
 const pkg = require('../package.json');
 const program = require('commander');
-const negate = require('lodash.negate');
 const invert = require('lodash.invert');
-
-const aliases = new Set([
-  'distance'
-]);
+const isNotAlias = require('./aliases').isNotAlias;
 
 program
   .version(pkg.version)
@@ -18,18 +14,12 @@ program
   .option('-t, --to [unit]', 'unit to convert to (required)')
   .option('-d, --precision [precision]', 'precision, amount of decimal places to work with');
 
-const isAlias = (name) => {
-  return aliases.has(name);
-};
-
-const isNotAlias = negate(isAlias);
-
 const preface = (
 `  Examples
 
-    $ linear-converter 25 --property length --from metres --to yards
+    $ linear-converter 25 --from metres --to yards
     $ lco -n 100 -f fahrenheit -t celsius
-    $ echo -40 | lco --from °C --to °F
+    $ lco 34500 -f yards -t metres | lco -f none -t hecto
 
   Properties and units`);
 
