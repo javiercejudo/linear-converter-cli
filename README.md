@@ -1,4 +1,4 @@
-# linear-converter-cli [WIP](https://github.com/javiercejudo/linear-converter-cli/tree/rewrite)
+# linear-converter-cli
 
 CLI for [linear-converter](https://github.com/javiercejudo/linear-converter)
 
