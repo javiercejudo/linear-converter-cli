@@ -12,7 +12,8 @@ program
   .option('-p, --property [property]', 'property to convert')
   .option('-f, --from [unit]', 'unit to convert from (required)')
   .option('-t, --to [unit]', 'unit to convert to (required)')
-  .option('-d, --precision [precision]', 'precision, amount of decimal places to work with');
+  .option('-d, --precision [precision]', 'precision, amount of decimal places to work with')
+  .option('-v, --verbose', 'show detailed output');
 
 const preface = (
 `  Examples

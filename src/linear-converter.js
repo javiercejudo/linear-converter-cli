@@ -9,10 +9,19 @@ const anyToAnyFactory = require('linear-preset-any-to-any');
 const arbitraryPrecision = require('arbitrary-precision');
 
 const presets = require('linear-presets').PRESETS;
+
+let emitter = require('./eventEmitter');
+
 const synonyms = require('./synonyms')(presets);
 const inferrer = require('./inferrer')(synonyms);
 
 let program = require('./program')(synonyms);
+
+if (program.verbose) {
+  emitter.on('log', (message) => {
+    console.log(message);
+  });
+}
 
 // might want to use different adapters depending on program options
 const adapter = require('bigjs-adapter');
@@ -39,12 +48,18 @@ if (properties.size > 1) {
 
 const property = properties.values().next().value;
 
-if (isUndefined(presets[property])) {
-  console.error(`Unrecognised unit: ${program.from}`);
+if (isUndefined(synonyms[property])) {
+  console.error(`Unrecognised property: ${property}`);
   process.exit(1);
 }
 
-const conversions = presets[property].conversions;
+const from = synonyms[property][program.from];
+
+if (isUndefined(from)) {
+  console.error(`Unrecognised ${property} unit: ${program.from}`);
+  process.exit(1);
+}
+
 const to = synonyms[property][program.to];
 
 if (isUndefined(to)) {
@@ -52,16 +67,13 @@ if (isUndefined(to)) {
   process.exit(1);
 }
 
-const conversion = anyToAny(
-  conversions,
-  synonyms[property][program.from],
-  synonyms[property][program.to]
-);
-
+const conversion = anyToAny(presets[property].conversions, from, to);
 const inputParser = require('./inputParser');
 
 stdin().then((input) => {
   const x = inputParser(input, program, Decimal);
+
+  emitter.emit('log', `Converting ${property}: ${x} ${from} to ${to}`);
 
   console.log(lc.convert(conversion, x).toString());
   process.exit(0);

@@ -52,6 +52,7 @@ A final example to overcome the lack of some units (yards to hectometres):
       -f, --from [unit]            unit to convert from (required)
       -t, --to [unit]              unit to convert to (required)
       -d, --precision [precision]  precision, amount of decimal places to work with
+      -v, --verbose                show detailed output
 
     Examples
 
