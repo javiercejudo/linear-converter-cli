@@ -18,9 +18,7 @@ const inferrer = require('./inferrer')(synonyms);
 let program = require('./program')(synonyms);
 
 if (program.verbose) {
-  emitter.on('log', (message) => {
-    console.log(message);
-  });
+  emitter.on('log', (message) => console.log(message));
 }
 
 // might want to use different adapters depending on program options

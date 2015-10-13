@@ -10,6 +10,9 @@
   "scripts": {
     "test": "gulp test"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/javiercejudo/linear-converter-cli"

@@ -2,16 +2,12 @@
 
 const negate = require('lodash.negate');
 
-const aliases = new Set([
-  'distance'
-]);
-
-const isAlias = (name) => {
-  return aliases.has(name);
-};
+const aliases = new Set(['distance']);
+const isAlias = (name) => aliases.has(name);
+const isNotAlias = negate(isAlias);
 
 module.exports = {
-  aliases: aliases,
-  isAlias: isAlias,
-  isNotAlias: negate(isAlias)
+  aliases,
+  isAlias,
+  isNotAlias
 };
