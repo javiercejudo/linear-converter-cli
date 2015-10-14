@@ -1,16 +1,15 @@
 'use strict';
 
 const identitySynonyms = (conversions) => {
-  var unitSynonyms = {};
+  return Object.keys(conversions).reduce((synonyms, unit) => {
+    synonyms[unit] = unit;
 
-  Object.keys(conversions).map((unit) => {
-    unitSynonyms[unit] = unit;
-  });
-
-  return unitSynonyms;
+    return synonyms;
+  }, {});
 };
 
 var synonyms = {
+  amountOfSubstance: require('unit-synonyms-amount-of-substance').synonyms,
   area: require('unit-synonyms-area').synonyms,
   length: require('unit-synonyms-length').synonyms,
   mass: require('unit-synonyms-mass').synonyms,
@@ -25,7 +24,6 @@ synonyms.distance = synonyms.length;
 
 module.exports = (presets) => {
   var missingProperties = [
-    'amountOfSubstance',
     'angle',
     'digitalInformation',
     'electricCurrent',

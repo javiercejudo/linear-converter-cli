@@ -52,6 +52,7 @@
     "lodash.isundefined": "^3.0.1",
     "lodash.negate": "^3.0.1",
     "lodash.pick": "^3.1.0",
+    "unit-synonyms-amount-of-substance": "^1.0.0",
     "unit-synonyms-area": "^1.0.0",
     "unit-synonyms-length": "^1.0.0",
     "unit-synonyms-mass": "^1.0.0",
