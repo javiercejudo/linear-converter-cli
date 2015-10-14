@@ -31,9 +31,9 @@ module.exports = (presets) => {
     'velocity'
   ];
 
-  missingProperties.forEach((missingProperty) => {
-    synonyms[missingProperty] = identitySynonyms(presets[missingProperty].conversions);
-  });
+  return missingProperties.reduce((acc, missingProperty) => {
+    acc[missingProperty] = identitySynonyms(presets[missingProperty].conversions);
 
-  return synonyms;
+    return acc;
+  }, synonyms);
 };
