@@ -10,6 +10,7 @@ const identitySynonyms = (conversions) => {
 
 var synonyms = {
   amountOfSubstance: require('unit-synonyms-amount-of-substance').synonyms,
+  angle: require('unit-synonyms-angle').synonyms,
   area: require('unit-synonyms-area').synonyms,
   length: require('unit-synonyms-length').synonyms,
   mass: require('unit-synonyms-mass').synonyms,
@@ -24,7 +25,6 @@ synonyms.distance = synonyms.length;
 
 module.exports = (presets) => {
   var missingProperties = [
-    'angle',
     'digitalInformation',
     'electricCurrent',
     'luminousIntensity',
