@@ -62,6 +62,18 @@ A final example to overcome the lack of some units (yards to hectometres):
 
     Properties and units
 
+      amountOfSubstance
+
+        mole, moles, mol
+        poundMole, poundMoles, pound mole, pound moles, lb mol, lb-mol, lbmol
+
+      angle
+
+        radian, radians, rad, ㎭, r, c, ᶜ
+        turn, turns, tr, pla, revolution, revolutions, rev, revs, complete rotation, complete rotations, rot, full circle, full circles, cycle, cycles
+        degree, degrees, degree of arc, degrees of arc, arc degree, arc degrees, arcdegree, arcdegrees, °
+        gradian, gradians, gon, gons, grad, grads, grade, grades, g, ᵍ
+
       area
 
         squareMetre, squareMetres, squareMeter, squareMeters, square metre, square metres, square meter, square meters, sq m, m2, m²
@@ -179,18 +191,6 @@ A final example to overcome the lack of some units (yards to hectometres):
         USPint, USPints, US pint, US pints, US pt, US p
         USQuart, USQuarts, US quart, US quarts
         USGallon, USGallons, US gallon, US gallons
-
-      amountOfSubstance
-
-        mole
-        poundMole
-
-      angle
-
-        radian
-        turn
-        degree
-        gradian
 
       digitalInformation
 
