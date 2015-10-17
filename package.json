@@ -55,6 +55,7 @@
     "unit-synonyms-amount-of-substance": "^1.0.0",
     "unit-synonyms-angle": "^1.0.0",
     "unit-synonyms-area": "^1.0.0",
+    "unit-synonyms-electric-current": "^1.0.1",
     "unit-synonyms-length": "^1.0.0",
     "unit-synonyms-mass": "^1.0.0",
     "unit-synonyms-metric-prefixes": "^1.0.0",

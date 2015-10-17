@@ -12,6 +12,7 @@ var synonyms = {
   amountOfSubstance: require('unit-synonyms-amount-of-substance').synonyms,
   angle: require('unit-synonyms-angle').synonyms,
   area: require('unit-synonyms-area').synonyms,
+  electricCurrent: require('unit-synonyms-electric-current').synonyms,
   length: require('unit-synonyms-length').synonyms,
   mass: require('unit-synonyms-mass').synonyms,
   metricPrefixes: require('unit-synonyms-metric-prefixes').synonyms,
@@ -26,7 +27,6 @@ synonyms.distance = synonyms.length;
 module.exports = (presets) => {
   var missingProperties = [
     'digitalInformation',
-    'electricCurrent',
     'luminousIntensity',
     'velocity'
   ];
