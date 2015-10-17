@@ -85,6 +85,11 @@ A final example to overcome the lack of some units (yards to hectometres):
         squareFoot, squareFeet, square foot, square feet, sq ft, ft2, ft²
         squareInch, squareInches, square inch, square inches, sq in, in2, in²
 
+      electricCurrent
+
+        ampere, amperes, amp, A
+        abampere, abamperes, abA, biot, biots, Bi
+
       length
 
         metre, metres, meter, meters, m
@@ -204,11 +209,6 @@ A final example to overcome the lack of some units (yards to hectometres):
         exbibyte
         zebibyte
         yobibyte
-
-      electricCurrent
-
-        ampere
-        abampere
 
       luminousIntensity
 
