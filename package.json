@@ -1,6 +1,6 @@
 {
   "name": "linear-converter-cli",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Flexible linear converter with built in conversions for common units",
   "main": "src/linear-converter.js",
   "bin": {
