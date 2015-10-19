@@ -63,6 +63,7 @@
     "unit-synonyms-temperature": "^1.0.0",
     "unit-synonyms-temperature-difference": "^1.0.0",
     "unit-synonyms-time": "^1.0.0",
+    "unit-synonyms-velocity": "^1.0.0",
     "unit-synonyms-volume": "^1.0.0"
   }
 }

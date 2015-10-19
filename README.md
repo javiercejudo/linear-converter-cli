@@ -102,6 +102,12 @@ A final example to overcome the lack of some units (yards to hectometres):
         inch, inches, in, ″
         nauticalMile, nautical mile, nautical miles, M, NM, nmi
 
+      luminousIntensity
+
+        candela, candelas, cd
+        candlepower, candlepowers, cp
+        hefnerkerze, hefnerkerzes, hefner lamp, hefner lamps, HK, hk
+
       mass
 
         kilogram, kilograms, kilogramme, kilogrammes, kilo, kilos, kg
@@ -177,6 +183,14 @@ A final example to overcome the lack of some units (yards to hectometres):
         century, centuries, c., cent., Cent., mean century, mean centuries
         millennium, millenniums, mean millennium, mean millenniums
 
+      velocity
+
+        metresSecond, metreSecond, metre per second, metres per second, meter per second, meters per second, m·s−1, m·s⁻¹, m s−1, m s⁻¹, m/s, ㎧, mps
+        milesHour, mileHour, mile per hour, miles per hour, mph, MPH, mi/h
+        feetSecond, footSecond, feet per second, ft/s, ft/sec, fps, ft s−1, ft s⁻¹
+        kilometresHour, kilometreHour, kilometre per hour, kilometres per hour, kilometer per hour, kilometers per hour, km·h−1, km·h⁻¹, km h−1, km h⁻¹, km/h, kph
+        knot, knots, kn, kt
+
       volume
 
         cubicMetre, cubicMetres, cubicMeter, cubicMeters, cubic metre, cubic metres, cubic meter, cubic meters, m3, m³, kl, kL
@@ -209,17 +223,3 @@ A final example to overcome the lack of some units (yards to hectometres):
         exbibyte
         zebibyte
         yobibyte
-
-      luminousIntensity
-
-        candela
-        candlepower
-        hefnerkerze
-
-      velocity
-
-        metresSecond
-        milesHour
-        feetSecond
-        kilometresHour
-        knot

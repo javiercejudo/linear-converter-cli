@@ -20,20 +20,14 @@ var synonyms = {
   temperature: require('unit-synonyms-temperature').synonyms,
   temperatureDifference: require('unit-synonyms-temperature-difference').synonyms,
   time: require('unit-synonyms-time').synonyms,
+  velocity: require('unit-synonyms-velocity').synonyms,
   volume: require('unit-synonyms-volume').synonyms
 };
 
 synonyms.distance = synonyms.length;
 
 module.exports = (presets) => {
-  var missingProperties = [
-    'digitalInformation',
-    'velocity'
-  ];
+  synonyms.digitalInformation = identitySynonyms(presets.digitalInformation.conversions);
 
-  return missingProperties.reduce((acc, missingProperty) => {
-    acc[missingProperty] = identitySynonyms(presets[missingProperty].conversions);
-
-    return acc;
-  }, synonyms);
+  return synonyms;
 };
