@@ -12,7 +12,7 @@ const presets = require('linear-presets').PRESETS;
 
 let emitter = require('./eventEmitter');
 
-const synonyms = require('./synonyms')(presets);
+const synonyms = require('./synonyms');
 const inferrer = require('./inferrer')(synonyms);
 
 let program = require('./program')(synonyms);

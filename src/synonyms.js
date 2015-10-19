@@ -1,17 +1,10 @@
 'use strict';
 
-const identitySynonyms = (conversions) => {
-  return Object.keys(conversions).reduce((synonyms, unit) => {
-    synonyms[unit] = unit;
-
-    return synonyms;
-  }, {});
-};
-
 var synonyms = {
   amountOfSubstance: require('unit-synonyms-amount-of-substance').synonyms,
   angle: require('unit-synonyms-angle').synonyms,
   area: require('unit-synonyms-area').synonyms,
+  digitalInformation: require('unit-synonyms-digital-information').synonyms,
   electricCurrent: require('unit-synonyms-electric-current').synonyms,
   length: require('unit-synonyms-length').synonyms,
   luminousIntensity: require('unit-synonyms-luminous-intensity').synonyms,
@@ -26,8 +19,4 @@ var synonyms = {
 
 synonyms.distance = synonyms.length;
 
-module.exports = (presets) => {
-  synonyms.digitalInformation = identitySynonyms(presets.digitalInformation.conversions);
-
-  return synonyms;
-};
+module.exports = synonyms;

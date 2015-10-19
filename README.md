@@ -57,7 +57,7 @@ A final example to overcome the lack of some units (yards to hectometres):
     Examples
 
       $ linear-converter 25 --from metres --to yards
-      $ lco -n 100 -f fahrenheit -t celsius
+      $ lco -n 100 -p temperature -f fahrenheit -t celsius
       $ lco 34500 -f yards -t metres | lco -f none -t hecto
 
     Properties and units
@@ -84,6 +84,19 @@ A final example to overcome the lack of some units (yards to hectometres):
         squareYard, squareYards, square yard, square yards, sq yd, yd2, yd²
         squareFoot, squareFeet, square foot, square feet, sq ft, ft2, ft²
         squareInch, squareInches, square inch, square inches, sq in, in2, in²
+
+      digitalInformation
+
+        byte, bytes, B
+        bit, bits, b
+        kibibyte, kibibytes, KiB
+        mebibyte, mebibytes, MiB
+        gibibyte, gibibytes, GiB
+        tebibyte, tebibytes, TiB
+        pebibyte, pebibytes, PiB
+        exbibyte, exbibytes, EiB
+        zebibyte, zebibytes, ZiB
+        yobibyte, yobibytes, YiB
 
       electricCurrent
 
@@ -210,16 +223,3 @@ A final example to overcome the lack of some units (yards to hectometres):
         USPint, USPints, US pint, US pints, US pt, US p
         USQuart, USQuarts, US quart, US quarts
         USGallon, USGallons, US gallon, US gallons
-
-      digitalInformation
-
-        byte
-        bit
-        kibibyte
-        mebibyte
-        gibibyte
-        tebibyte
-        pebibyte
-        exbibyte
-        zebibyte
-        yobibyte
