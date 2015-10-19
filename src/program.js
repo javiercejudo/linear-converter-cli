@@ -19,7 +19,7 @@ const preface = (
 `  Examples
 
     $ linear-converter 25 --from metres --to yards
-    $ lco -n 100 -f fahrenheit -t celsius
+    $ lco -n 100 -p temperature -f fahrenheit -t celsius
     $ lco 34500 -f yards -t metres | lco -f none -t hecto
 
   Properties and units`);
