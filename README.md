@@ -1,5 +1,9 @@
 # linear-converter-cli
 
+[![Build Status](https://travis-ci.org/javiercejudo/linear-converter-cli.svg)](https://travis-ci.org/javiercejudo/linear-converter-cli)
+[![Coverage Status](https://coveralls.io/repos/javiercejudo/linear-converter-cli/badge.svg?branch=master)](https://coveralls.io/r/javiercejudo/linear-converter-cli?branch=master)
+[![Code Climate](https://codeclimate.com/github/javiercejudo/linear-converter-cli/badges/gpa.svg)](https://codeclimate.com/github/javiercejudo/linear-converter-cli)
+
 CLI for [linear-converter](https://github.com/javiercejudo/linear-converter)
 
 ## Install
