@@ -2,12 +2,11 @@
 
 const isUndefined = require('lodash.isundefined');
 const pick = require('lodash.pick');
-const isNotAlias = require('./aliases').isNotAlias;
 
 let emitter = require('./eventEmitter');
 
 const inferProperties = (candidates, unit) => {
-  return Object.keys(candidates).filter(isNotAlias).reduce((properties, currentProperty) => {
+  return Object.keys(candidates).reduce((properties, currentProperty) => {
     if (candidates[currentProperty].hasOwnProperty(unit)) {
       emitter.emit('log', `Inferred unit match: ${unit} => ${candidates[currentProperty][unit]} (${currentProperty})`);
       properties.add(currentProperty);

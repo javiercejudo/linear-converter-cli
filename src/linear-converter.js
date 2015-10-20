@@ -9,10 +9,10 @@ const anyToAnyFactory = require('linear-preset-any-to-any');
 const arbitraryPrecision = require('arbitrary-precision');
 
 const presets = require('linear-presets').PRESETS;
+const synonyms = require('unit-synonyms').SYNONYMS;
 
 let emitter = require('./eventEmitter');
 
-const synonyms = require('./synonyms');
 const inferrer = require('./inferrer')(synonyms);
 
 let program = require('./program')(synonyms);

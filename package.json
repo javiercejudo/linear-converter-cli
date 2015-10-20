@@ -47,24 +47,11 @@
     "get-stdin": "^5.0.0",
     "linear-converter": "^7.0.0",
     "linear-preset-any-to-any": "^3.0.2",
-    "linear-presets": "^2.0.4",
+    "linear-presets": "^3.0.0",
     "lodash.invert": "^3.0.1",
     "lodash.isundefined": "^3.0.1",
     "lodash.negate": "^3.0.1",
     "lodash.pick": "^3.1.0",
-    "unit-synonyms-amount-of-substance": "^1.0.0",
-    "unit-synonyms-angle": "^1.0.0",
-    "unit-synonyms-area": "^1.0.0",
-    "unit-synonyms-digital-information": "^1.0.0",
-    "unit-synonyms-electric-current": "^1.0.1",
-    "unit-synonyms-length": "^1.0.0",
-    "unit-synonyms-luminous-intensity": "^1.0.0",
-    "unit-synonyms-mass": "^1.0.0",
-    "unit-synonyms-metric-prefixes": "^1.0.0",
-    "unit-synonyms-temperature": "^1.0.0",
-    "unit-synonyms-temperature-difference": "^1.0.0",
-    "unit-synonyms-time": "^1.0.0",
-    "unit-synonyms-velocity": "^1.0.0",
-    "unit-synonyms-volume": "^1.0.0"
+    "unit-synonyms": "^1.0.0"
   }
 }

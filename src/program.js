@@ -3,7 +3,6 @@
 const pkg = require('../package.json');
 const program = require('commander');
 const invert = require('lodash.invert');
-const isNotAlias = require('./aliases').isNotAlias;
 
 program
   .version(pkg.version)
@@ -28,7 +27,7 @@ const help = (synonyms) => {
   return () => {
     console.log(preface);
 
-    Object.keys(synonyms).filter(isNotAlias).forEach((property) => {
+    Object.keys(synonyms).forEach((property) => {
       console.log('\n    ' + property + '\n');
       const currentSynonyms = invert(synonyms[property], true);
 
